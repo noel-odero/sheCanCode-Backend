@@ -1,0 +1,85 @@
+QUESTION 1: Functions, Loops, and Conditionals
+Scenario: You are building a membership system for a gym. Each member has a name (string) and 
+a membership level ("gold", "silver", "bronze", or any new levels added in the future).
+Sub-questions: a. Write a function countMembershipLevels(members) that takes an array of 
+member objects and returns an object showing the count of each membership level. The function 
+should dynamically count all membership levels, including any new levels that may be added.
+Example output: { gold: 3, silver: 2, bronze: 4, platinum: 1 }.
+b. Write a function getGoldMembers(members) that returns an array of names of all members with 
+the membership level "gold". If there are no gold members, return "No gold members found".
+Use the filter method.
+c. Modify the getGoldMembers function to return "No gold members found" if there are no gold 
+members, even when the members array is empty or contains invalid data.
+d. Write a function generateWelcomeMessages(members) that returns an array of messages like 
+"Welcome, [name]! You are a [membership level] member."
+Use the map method.
+e. Explain: Why is map often preferred over traditional loops for transforming data in arrays? Discuss 
+performance and readability.
+
+
+QUESTION 2: Recursion and Algorithmic Thinking 
+Scenario: You are working on an encryption system for a messaging app. You need to perform some 
+recursive operations on strings and numbers.
+Sub-questions: a. Write a recursive function sumDigits(n) that takes a number and returns the 
+sum of its digits. Example: sumDigits(123) → 6.
+b. Write a recursive function power(base, exponent) that calculates base^exponent. Example:
+power(2, 3) → 8.
+c. Write a recursive function reverseWords(sentence) that reverses the order of words in a 
+string. Example: "Hello world" → "world Hello".
+d. Explain: When is recursion less efficient than iteration? Provide an example where iteration would 
+be a better choice (such as in cases with large datasets or deep recursion).
+e. Convert the sumDigits(n) function to an iterative version. Compare the performance of both the 
+recursive and iterative approaches when handling large numbers.
+f. Bonus (Optional): Write a recursive function to reverse a string by breaking it down into smaller 
+substrings. Example: 'JavaScript' → 'tpircSavaJ'.
+
+
+
+QUESTION 3: Banking Transaction System 
+Scenario: A banking system tracks transactions, each with transactionId (string),
+accountHolder (string), and amount (number, positive for deposits, negative for withdrawals).
+Sub-questions: a. Write a function calculateBalance(transactions, accountHolder) that 
+returns the current balance for a user. If the user has no transactions, return "No transactions found".
+b. Write a function largeTransactions(transactions, minAmount) that returns transactions 
+above minAmount.
+c. Write a function sortTransactions(transactions) that sorts transactions from highest to 
+lowest amount.
+d. Write a function generateTransactionHistory(transactions, accountHolder) that 
+returns messages like:
+ "Alice deposited $500"
+ "Bob withdrew $200"
+Additional Changes:
+e. Bonus: Modify calculateBalance to handle multiple users and return a balance for each user, 
+instead of just one account holder.
+f. Bonus: Modify calculateBalance to apply 5% interest on deposits over $1000. The new 
+balance should reflect the interest calculation.
+
+
+
+
+QUESTION 4: Implementing a Simple Voting System for Bootcamp Challenges 
+Scenario: Students vote for their favorite project in a bootcamp competition. Each vote is an object 
+like { student: "Alice", project: "Project A" }.
+Sub-questions: a. Write a function countProjectVotes(votes) that returns an object showing 
+the number of votes each project received.
+Example input:
+const votes = [
+{ student: "Alice", project: "Project A" },
+{ student: "Bob", project: "Project B" },
+{ student: "Charlie", project: "Project A" }
+];
+Expected output:
+{ "Project A": 2, "Project B": 1 }
+Use reduce.
+b. Write a function findWinningProject(votes) that returns the project with the highest number 
+of votes.
+c. Write a function getUniqueProjects(votes) that returns an array of all unique project names. 
+Use Set.
+d. Modify findWinningProject(votes) to return "No votes cast" if the votes array is empty or 
+contains invalid data.
+e. Explain: Why is reduce useful for counting votes instead of using a traditional for loop?
+Additional Changes:
+f. Bonus: Modify countProjectVotes to ensure that each student can only vote once per project. 
+If a student votes again for the same project, their previous vote should be overwritten.
+g. Bonus: Implement a ranked voting system where students rank their top 3 projects. Write a 
+function that counts the votes and determines the winner based on the highest cumulative rank score.

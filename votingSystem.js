@@ -22,11 +22,20 @@ function countProjectVotes(votes) {
         //     [ [ 'student', 'Charlie' ], [ 'project', 'Project A' ] ]
         //   ]
 
-        for(let i=0; i<newArr.length; i++){
-            let newArr = [newArr[i][1][1], ]
-        }
+        // Expected output:
+// { "Project A": 2, "Project B": 1 
+
+            for(let i = 0; i < newArr.length; i++){
+                let count = 0
+                if(newArr[i][1][1] === "Project A"){
+                    count++
+                } else if(newArr[i][1][1] === "Project B"){
+                    count++
+                }
+            }
+
     }
-    return newArr.flat()
+    return count
 }
 
 
